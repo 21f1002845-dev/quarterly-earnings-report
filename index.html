@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Q2 Quarterly Earnings – Interactive Report</title>
+
+    <!-- Core RevealJS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css"
+    />
+    <!-- Theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/white.css"
+      id="theme"
+    />
+
+    <!-- Code syntax highlighting theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css"
+    />
+
+    <style>
+      /* Custom theme tweaks */
+      .reveal {
+        font-family: "Arial", sans-serif;
+      }
+
+      .chart-placeholder {
+        width: 100%;
+        height: 400px;
+        border: 2px dashed #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .email-tag {
+        font-size: 0.7em;
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <!-- TITLE SLIDE -->
+        <section>
+          <h1>Quarterly Earnings Report</h1>
+          <h3>Q2 FY 2025</h3>
+          <p>Technical Consultant – Major Financial Institution</p>
+          <p class="email-tag">
+            Contact: <strong>21f1002845@ds.study.iitm.ac.in</strong>
+          </p>
+          <aside class="notes">
+            Welcome everyone, this is our interactive quarterly earnings report
+            built with RevealJS and deployed on GitHub Pages. I’ll walk through
+            revenue highlights, key KPIs, and technical insights.
+          </aside>
+        </section>
+
+        <!-- MARKDOWN SLIDE (REQUIRED) -->
+        <section data-markdown>
+          <textarea data-template>
+## Earnings Overview (Markdown Slide)
+
+- **Revenue Growth:** +12.5% QoQ  
+- **Net Income:** ? 480 Cr  
+- **Cost-to-Income Ratio:** 42%  
+- **NPA (Non-Performing Assets):** 1.8%
+
+---
+
+### Key Takeaways
+
+1. Strong **loan book expansion** in retail segment  
+2. Improved **interest margin** due to rate optimization  
+3. Continued investment in **risk analytics & data platforms**
+
+*This entire slide is written using Markdown.*
+          </textarea>
+          <aside class="notes">
+            Emphasize that this slide demonstrates Markdown support in RevealJS.
+            Numbers can be adjusted before the final presentation to reflect
+            actual financials.
+          </aside>
+        </section>
+
+        <!-- ANIMATED ELEMENTS WITH FRAGMENTS -->
+        <section>
+          <h2>Drivers of Revenue Growth</h2>
+          <ul>
+            <li class="fragment">Retail Lending (+18% YoY)</li>
+            <li class="fragment">Corporate Banking Fees (+9% YoY)</li>
+            <li class="fragment fade-up">Digital Transactions Volume (+35% YoY)</li>
+            <li class="fragment fade-in-then-out">
+              Cost Optimization in Branch Operations
+            </li>
+          </ul>
+          <aside class="notes">
+            Reveal points one by one to keep stakeholders focused. Pause briefly
+            after each fragment to allow questions, especially on digital
+            transactions and cost optimization.
+          </aside>
+        </section>
+
+        <!-- SIMPLE INTERACTIVE-LIKE PLACEHOLDER (for charts) -->
+        <section>
+          <h2>Revenue vs. Operating Expense</h2>
+          <div class="chart-placeholder">
+            <p>
+              Chart Placeholder (hook for D3/Plotly/Observable later)<br />
+              e.g., Revenue &amp; Opex trend over last 8 quarters
+            </p>
+          </div>
+          <aside class="notes">
+            Explain that this placeholder can host a live D3/Plotly chart
+            showing time-series data for revenue and operating expenses.
+          </aside>
+        </section>
+
+        <!-- CODE SAMPLE WITH SYNTAX HIGHLIGHTING -->
+        <section>
+          <h2>Risk-Adjusted Return Calculation (Code)</h2>
+          <pre>
+<code class="language-python" data-line-numbers="1-3|5-9|11-13">
+import pandas as pd
+
+def risk_adjusted_return(df: pd.DataFrame) -> pd.Series:
+    """
+    Compute risk-adjusted return for each portfolio.
+    df must contain columns: 'return', 'risk_free_rate', 'volatility'.
+    """
+    excess_return = df["return"] - df["risk_free_rate"]
+    # Simple Sharpe-like ratio
+    ratio = excess_return / df["volatility"].replace(0, float("nan"))
+    return ratio
+
+# Example:
+# df["ra_return"] = risk_adjusted_return(df)
+</code>
+          </pre>
+          <aside class="notes">
+            This slide shows how we compute a simple risk-adjusted return metric,
+            similar to a Sharpe ratio. Highlight that RevealJS supports syntax
+            highlighting and line-by-line explanations.
+          </aside>
+        </section>
+
+        <!-- MATH / FINANCIAL FORMULAS -->
+        <section>
+          <h2>Key Financial Formulae</h2>
+          <p>Net Present Value (NPV):</p>
+          <p>
+            \[
+              \text{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1 + r)^t}
+            \]
+          </p>
+          <p>Return on Equity (ROE):</p>
+          <p>
+            \[
+              \text{ROE} = \frac{\text{Net Income}}{\text{Shareholder's Equity}}
+            \]
+          </p>
+          <aside class="notes">
+            Use this slide to explain the financial metrics used in evaluating
+            projects and overall profitability. Mention that formulas are
+            rendered via MathJax using the Reveal Math plugin.
+          </aside>
+        </section>
+
+        <!-- SPEAKER NOTES EXAMPLE SLIDE -->
+        <section>
+          <h2>Guidance & Outlook</h2>
+          <ul>
+            <li class="fragment">Expected credit growth: 10–12% for next FY</li>
+            <li class="fragment">Focus on digital onboarding & automation</li>
+            <li class="fragment">Stronger risk controls in unsecured lending</li>
+          </ul>
+          <aside class="notes">
+            Share cautiously optimistic guidance. Emphasize digital initiatives
+            and risk controls. Invite questions on capital adequacy and
+            macroeconomic assumptions.
+          </aside>
+        </section>
+
+        <!-- CONTACT / WRAP-UP -->
+        <section>
+          <h2>Thank You</h2>
+          <p>Questions or follow-ups?</p>
+          <p class="email-tag">
+            Email: <strong>21f1002845@ds.study.iitm.ac.in</strong>
+          </p>
+          <aside class="notes">
+            Wrap up and invite stakeholders to reach out for detailed
+            drill-downs or data extracts. Mention that the deck is accessible
+            via GitHub Pages and can be updated frequently.
+          </aside>
+        </section>
+      </div>
+    </div>
+
+    <!-- RevealJS core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+
+    <!-- Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+
+    <script>
+      Reveal.initialize({
+        width: 1280,
+        height: 720,
+        margin: 0.04,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: "slide",
+        // Enable slide numbers if you like
+        slideNumber: true,
+        plugins: [RevealMarkdown, RevealHighlight, RevealMath, RevealNotes],
+        math: {
+          // MathJax 3 config
+          mathjax:
+            "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
+          config: "TeX-AMS_HTML-full"
+        }
+      });
+    </script>
+  </body>
+</html>
